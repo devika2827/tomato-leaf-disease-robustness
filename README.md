@@ -15,7 +15,7 @@ A comparison of a small CNN trained from scratch and a fine-tuned ImageNet-pretr
 
 ## Data
 
-- Dataset: PlantVillage (Kaggle: [add dataset link]), 10 tomato classes: Bacterial spot, Early blight, Late blight, Leaf mold, Septoria leaf spot, Spider mites, Target spot, Yellow leaf curl virus, Mosaic virus, Healthy.
+- Dataset: PlantVillage (Kaggle: (https://www.kaggle.com/datasets/emmarex/plantdisease)), 10 tomato classes: Bacterial spot, Early blight, Late blight, Leaf mold, Septoria leaf spot, Spider mites, Target spot, Yellow leaf curl virus, Mosaic virus, Healthy.
 - Only the tomato classes were used, to keep training fast on a free Colab GPU.
 - Stratified 70/15/15 train/validation/test split with a fixed seed (42). The split is saved to a file and reused for every experiment. The test set has 2402 images.
 - The dataset zip contained the same folders twice. Only one copy was used so no image appears twice.
@@ -95,10 +95,7 @@ Grad-CAM was computed on ResNet18's last convolutional block for four randomly c
 
 ## Reproducing
 
-1. Open `[notebook filename].ipynb` in Google Colab with a T4 GPU.
+1. Open `tomato_leaf_disease_robustness.ipynb` in Google Colab with a T4 GPU.
 2. Download the dataset from Kaggle (link above) and unzip it.
 3. Run the notebook top to bottom. The split is created once and saved, so rerunning the split cell with the same seed gives the same result.
 
-## Author
-
-[Your name], [University], B.Tech Computer Science
